@@ -7,9 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FullstackApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(FullstackApplication.class, args);
-		System.out.println("Ola, Mundao!");
-
+		System.out.println("Ola, mundaoooo!");
 	}
+
 }
