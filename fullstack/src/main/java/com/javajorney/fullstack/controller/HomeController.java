@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/")
+//@RequestMapping("/")
 public class HomeController {
     @ResponseBody
+    @RequestMapping("/")
     public String hello() {
-       return "Ola, mundaoooo!";
+       return "Ola, mundaoooo45!";
     }
 }
