@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Login page</title>
+  <title>Login</title>
+  <style>
+    body{
+          font-family: Arial; Helvetica, sans-serif;
+          background-image: linear-gradient(45deg, cyan, yellow);
+   	}
+    div{
+          background-color: rgba(0, 0, 0, 0.8);
+          position: absolute; /*Restringe à área da div aos elementos dentro dela. */
+          top: 50%;
+          right: 31%;
+          left: 50%;
+          down: 50%;
+          transform: translate(-50%,-50%); /*-Posiciona todo o quadro no meio da pagina*/
+          padding: 20px; /*distancia entre os elementos e a borda*/
+          border-radius: 10px;
+          color: white;
+    }
+    input{
+      padding: 15px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      border-radius: 10px;
+
+    }
+    button{
+      background-color: dodgerblue;
+      border: none;
+      padding: 15px;
+      width: 100%;
+      border-radius: 10px;
+      color: white;
+    }
+  </style>
+
 </head>
 <body>
-<h1>Login page</h1>
+<div>
+<h1>Login</h1>
 <p th:if="${loginError}" class="error">Wrong user or password</p>
 <form th:action="@{/login.html}" method="post">
-  <label for="username">Username</label>:
-  <input type="text" id="username" name="username" autofocus="autofocus" /> <br />
-  <label for="password">Password</label>:
-  <input type="password" id="password" name="password" /> <br />
-  <input type="submit" value="Log in" />
+  <input type="text" id="username" name="username" autofocus="autofocus" placeholder="Usuário" /> <br />
+  <br></br>
+  <input type="password" id="password" name="password" placeholder="Senha" /> <br />
+  <br><br>
+  <button>Enviar</button>
 </form>
+</div>
 </body>
 </html>
