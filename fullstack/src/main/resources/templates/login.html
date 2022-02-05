@@ -5,10 +5,10 @@
   <style>
     body{
           font-family: Arial; Helvetica, sans-serif;
-          background-image: linear-gradient(45deg, cyan, yellow);
+          background-image: linear-gradient(45deg, cyan, black);
    	}
     div{
-          background-color: rgba(0, 0, 0, 0.8);
+          background-color: rgba(0,255,0,0.3);
           position: absolute; /*Restringe à área da div aos elementos dentro dela. */
           top: 50%;
           right: 31%;
@@ -34,6 +34,10 @@
       width: 100%;
       border-radius: 10px;
       color: white;
+      font-size: 15px;
+    }
+    button:hover {
+    background-color: deepskyblue;
     }
   </style>
 
@@ -43,9 +47,9 @@
 <h1>Login</h1>
 <p th:if="${loginError}" class="error">Wrong user or password</p>
 <form th:action="@{/login.html}" method="post">
-  <input type="text" id="username" name="username" autofocus="autofocus" placeholder="Usuário" /> <br />
+  <input type="text" id="username" name="username" autofocus="autofocus" placeholder="Usuário" th:text="${usuario}" /> <br />
   <br></br>
-  <input type="password" id="password" name="password" placeholder="Senha" /> <br />
+  <input type="password" id="password" name="password" placeholder="Senha" th:text="${senha}"/> <br />
   <br><br>
   <button>Enviar</button>
 </form>
