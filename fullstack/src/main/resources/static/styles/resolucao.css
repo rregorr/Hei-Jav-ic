@@ -24,13 +24,15 @@ input[type=text] {/*aplica em tudo. nao entendi*/
 }
 button[type=button]
 {
-display: block;
+display: inline-block;
 background-color:#ccc;
 height: 35px;
 width: 150px;
 border: none;
 outline: 0;
 cursor: pointer;
-margin: 1 auto;
+margin: 0 15px;
 text-align: center;
+float:left;
+
 }
