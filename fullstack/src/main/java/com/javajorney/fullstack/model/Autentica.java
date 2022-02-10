@@ -5,6 +5,7 @@ public class Autentica {
     private String senha;
     private String email;
 
+
     public String getUsuario() {
         return usuario;
     }

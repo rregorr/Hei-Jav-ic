@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styles/cadastro.css">
+    <title>Página de Cadastro</title>
+</head>
+<body>
+<form class="formulario" method="post">
+    <h2><center> Página de Cadastro de Questões</h2></center>
+    <div class="field">
+        <input type="text" name="pesquisa" placeholder="buscar questão">
+        <input type="text" name="disciplina" placeholder="Selecione a Disciplina">
+        <input type="text" name="assunto" placeholder="Selecione o Assunto">
+        <input type="text" name="ano" placeholder="Selecione o Ano">
+    </div><br>
+
+    <div class="field">
+        <textarea name="mensagem" id="mensagem" required></textarea>
+    </div><br>
+
+    <div class="field">
+        A) <input type="radio" name="a" value="a"><input type="text" name="a" placeholder="Digite o texto da alternativa A"/><br>
+        B) <input type="radio" name="a" value="b"><input type="text" name="b" placeholder="Digite o texto da alternativa B"/><br>
+        C) <input type="radio" name="a" value="c"><input type="text" name="c" placeholder="Digite o texto da alternativa C"/><br>
+        D) <input type="radio" name="a" value="d"><input type="text" name="d" placeholder="Digite o texto da alternativa D"/><br>
+        E) <input type="radio" name="a" value="e"><input type="text" name="e" placeholder="Digite o texto da alternativa E"/><br>
+           <input type="submit" name="enviar" value="Cadastrar"><br>
+    </div><br>
+
+    <div class="field">
+        <input type="reset">
+    </div><br><br>
+
+    <div>
+        <button type="button">Gerar Gráficos</button>
+    </div>
+
+</form>
+
+</body>
+
+</html>
