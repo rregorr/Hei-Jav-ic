@@ -40,6 +40,8 @@ input[type=reset]
     margin: 0 auto;
     text-align: center;
     border-radius: 15px;/*arredonda os inputs*/
+    float:left;
+
 }
 
 
