@@ -1,62 +1,64 @@
-.formulario{
-    width: 800px;
-    padding: 30px;
-    border: 1px solid ##ccc;
-}
 .field{
-    width: 100%;
+    width: 150%;
     margin: 15px 3;
 }
-.field label,
-.field span{
-    padding-left: 10px;
-    font-size: 1.1em;
-    display: block;
-    width: 90%;
-}
-input[type=text],
 
-textarea {/*aplica em tudo. nao entendi*/
-    width: 20%;/*largura de cada caixa*/
+input[type=text]/*Aplica a formatacao seguinte a input*/
+ {
+    width: 20%;/*largura de cada input*/
     padding-left: 10px; /*alinha texto na caixa, à esquerda*/
     height: 30px;/*altura da caixa*/
-    line-height: 3px;/**/
-    border-radius: 15px;
-    border: 3px solid #ccc;
+    border-radius: 15px;/*arredonda as bordas inputs/textareas*/
+    border: 3px solid #ccc; /*bordas grossas input/textarea*/
     outline: none;
 }
 
 textarea{
     line-height: 20px; /*aplica, de fato, no textarea*/
     padding: 10px;
-    height: 90px;
-    width: 520px;
+    width: 62%;
     resize: none;
+    position:relative;
+    top:29%;
+    height:80px;
+    border-radius: 15px;/*arredonda as bordas inputs/textareas*/
+    border: 3px solid #ccc; /*bordas grossas input/textarea*/
+    outline: none;
 }
 
-input[type=reset]{
-display: block;
-background-color:#ccc;
-height: 35px;
-width: 150px;
-border: none;
-outline: 0;
-cursor: pointer;
-margin: 0 auto;
-text-align: center;
-
-}
 input[type=submit],
-button[type=button]
+button[type=button],
+input[type=reset]
 {
-display: block;
-background-color:#ccc;
-height: 35px;
-width: 150px;
-border: none;
-outline: 0;
-cursor: pointer;
-margin: 0 auto;
-text-align: center;
+    display: block;
+    background-color:#ccc;
+    height: 35px;
+    width: 150px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;/*arredonda os inputs*/
+}
+
+
+input {
+    background-color: white; /*todos os inputs da pagina*/
+    border-radius: 15px;/*arredonda os inputs*/
+}
+
+h2 {
+  border: 2px solid #D3D3D3;/*caixa em volta do titulo*/
+  padding: 30px;/*largura da caixa em volta do titulo*/
+  border-radius: 15px;/*arredonda os inputs*/
+}
+
+fieldset /*caixa em volta do input e textarea*/
+{
+  width:1100px;
+  height:300px;
+  background-color:#FFF0F5;
+  border-radius: 15px;/*arredonda as bordas area principal
 }
 

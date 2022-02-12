@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/styles/cadastro.css">
     <title>Página de Cadastro</title>
 </head>
+
 <body>
-<form class="formulario" method="post">
+<div class="area">
+    <form id="formulario autocomplete="off">
+    <fieldset>
     <h2><center> Página de Cadastro de Questões</center></h2>
     <div class="field">
-        <input type="text" name="pesquisar" placeholder="Pesquisar">
+        <input type="text" name="banca" placeholder="Banca">
         <input type="text" name="disciplina" placeholder="Disciplina">
-        <input type="text" name="ano" placeholder="Ano">
-    </div><br>
-
-    <div class="field">
+        <input type="text" name="ano" placeholder="Ano"><br><br>
         <textarea name="mensagem" id="mensagem" required></textarea>
-    </div><br>
+    </div><br><br>
 
     <div class="field">
-        A) <input type="radio" name="a" value="a"><input type="text" name="a" placeholder="Digite o texto da alternativa A"/><br>
-        B) <input type="radio" name="a" value="b"><input type="text" name="b" placeholder="Digite o texto da alternativa B"/><br>
-        C) <input type="radio" name="a" value="c"><input type="text" name="c" placeholder="Digite o texto da alternativa C"/><br>
-        D) <input type="radio" name="a" value="d"><input type="text" name="d" placeholder="Digite o texto da alternativa D"/><br>
+        A) <input type="radio" name="a" value="a"><input type="text" name="a" placeholder="Digite o texto da alternativa A"/><br><br>
+        B) <input type="radio" name="a" value="b"><input type="text" name="b" placeholder="Digite o texto da alternativa B"/><br><br>
+        C) <input type="radio" name="a" value="c"><input type="text" name="c" placeholder="Digite o texto da alternativa C"/><br><br>
+        D) <input type="radio" name="a" value="d"><input type="text" name="d" placeholder="Digite o texto da alternativa D"/><br><br>
         E) <input type="radio" name="a" value="e"><input type="text" name="e" placeholder="Digite o texto da alternativa E"/><br>
            <input type="submit" name="enviar" value="Cadastrar"><br>
     </div><br>
@@ -34,7 +35,8 @@
     <div>
         <button type="button">Gerar Gráficos</button>
     </div>
+    </fieldset>
+    </form>
 
-</form>
 </body>
 </html>
