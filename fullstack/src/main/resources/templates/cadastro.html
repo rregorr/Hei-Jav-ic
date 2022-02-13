@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/styles/cadastro.css">
+        <title>Página de Cadastro</title>
+    </head>
+    <body>
+        <div class="area">
+            <form id="formulario autocomplete="off">
+                <fieldset>
+                    <h2><center> Página de Cadastro de Questões</center></h2>
+                    <div class="field">
+                        <input type="text" name="banca" placeholder="Banca">
+                        <input type="text" name="disciplina" placeholder="Disciplina">
+                        <input type="text" name="ano" placeholder="Ano"><br><br>
+                        <textarea name="mensagem" id="mensagem" required></textarea>
+                    </div>
+                </fieldset>
+        </div><br>
 
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/styles/cadastro.css">
-    <title>Página de Cadastro</title>
-</head>
+        <div class="entradas">
+              A) <input type="radio" name="a" value="a"><input type="text" name="a" placeholder="Digite o texto da alternativa A"/><br><br>
+              B) <input type="radio" name="a" value="b"><input type="text" name="b" placeholder="Digite o texto da alternativa B"/><br><br>
+              C) <input type="radio" name="a" value="c"><input type="text" name="c" placeholder="Digite o texto da alternativa C"/><br><br>
+              D) <input type="radio" name="a" value="d"><input type="text" name="d" placeholder="Digite o texto da alternativa D"/><br><br>
+              E) <input type="radio" name="a" value="e"><input type="text" name="e" placeholder="Digite o texto da alternativa E"/><br><br>
+        </div><br>
 
-<body>
-<div class="area">
-    <form id="formulario autocomplete="off">
-    <fieldset>
-    <h2><center> Página de Cadastro de Questões</center></h2>
-    <div class="field">
-        <input type="text" name="banca" placeholder="Banca">
-        <input type="text" name="disciplina" placeholder="Disciplina">
-        <input type="text" name="ano" placeholder="Ano"><br><br>
-        <textarea name="mensagem" id="mensagem" required></textarea>
-    </div><br><br>
+        <div class="botoes">
+              <button type="button">Cadastrar</button>
+              <input type="reset">
+              <button type="button">Gerar Gráficos</button>
+        </div>
 
-    <div class="field">
-        A) <input type="radio" name="a" value="a"><input type="text" name="a" placeholder="Digite o texto da alternativa A"/><br><br>
-        B) <input type="radio" name="a" value="b"><input type="text" name="b" placeholder="Digite o texto da alternativa B"/><br><br>
-        C) <input type="radio" name="a" value="c"><input type="text" name="c" placeholder="Digite o texto da alternativa C"/><br><br>
-        D) <input type="radio" name="a" value="d"><input type="text" name="d" placeholder="Digite o texto da alternativa D"/><br><br>
-        E) <input type="radio" name="a" value="e"><input type="text" name="e" placeholder="Digite o texto da alternativa E"/><br><br>
-    </div><br>
+        </form>
 
-    <div>
-        <div>
-            <button type="button">Cadastrar</button>
-        <div>
-            <input type="reset">
-        <div>
-            <button type="button">Gerar Gráficos</button>
-    </div>
-    </fieldset>
-    </form>
-
-</body>
+    </body>
 </html>
