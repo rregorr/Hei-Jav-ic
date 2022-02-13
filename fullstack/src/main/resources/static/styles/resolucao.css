@@ -1,60 +1,43 @@
-area{
-    color: red;
-    border-radius: 15px;/*arredonda as bordas inputs/textareas*/
-
-}
-
 form {
-    padding: 30px; /*posiciona a caisa principal*/
+    padding: 30px; /*posiciona a caixa principal*/
 }
 
-input[type=text] {/*aplica em tudo. nao entendi*/
+h2 {/*caixa ao redor do titulo*/
+    border: 2px solid #D3D3D3;
+    padding: 30px;
+    border-radius: 15px;/*arredonda os inputs*/
+}
+
+input[type=text]
+{/*aplica aos inputs de texto*/
     width: 20%;/*largura de cada caixa*/
     padding-left: 10px; /*alinha texto na caixa, à esquerda*/
     height: 30px;/*altura da caixa*/
     border-radius: 15px;/*arredonda os inputs*/
     border: 3px solid #ccc;
 }
+
 button[type=button]
 {
-display: inline-block;
-background-color:#ccc;
-height: 35px;
-width: 150px;
-border: none;
-outline: 0;
-cursor: pointer;
-border-radius: 15px;/*arredonda os inputs*/
-
-margin: 15px;
-  text-align: center;
-}
-
-
-h2 {
-  border: 2px solid #D3D3D3;
-  padding: 30px;
-}
-
-
-#area #formulario
-{
-  position:absolute;
-  display:block;
+    background-color:#ccc;
+    height: 35px;
+    width: 150px;
+    border: none;/*tira as bordas*/
+    cursor: pointer;
+    border-radius: 15px;/*arredonda os botoes*/
+    margin: 15px; /*margem vertical*/
+    text-align: center;
 }
 
 fieldset
 {
-  width:1100px;
-  height:250px;
-  background-color:#FFF0F5;
-  border-radius: 15px;/*arredonda as bordas inputs/textareas*/
-
+    width:1100px;
+    height:250px;
+    background-color:#FFF0F5;
+    border-radius: 15px;/*arredonda as bordas inputs/textareas*/
 }
 
-
-
 .area {/**centraliza os botoes*/
-  margin: 15px;
-  text-align: center;
+    margin: 15px;
+    text-align: center;
 }
