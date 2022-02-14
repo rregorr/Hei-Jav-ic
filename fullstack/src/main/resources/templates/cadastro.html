@@ -16,7 +16,7 @@
                         <input type="text" name="banca" placeholder="Banca">
                         <input type="text" name="disciplina" placeholder="Disciplina">
                         <input type="text" name="ano" placeholder="Ano"><br><br>
-                        <textarea name="mensagem" id="mensagem" required></textarea>
+                        <textarea name="mensagem" id="mensagem" required placeholder="Digite o texto da questão"></textarea>
                         </div>
                     </div>
                 </fieldset>
@@ -29,12 +29,15 @@
               D) <input type="radio" name="a" value="d"><input type="text" name="d" placeholder="Digite o texto da alternativa D"/><br><br>
               E) <input type="radio" name="a" value="e"><input type="text" name="e" placeholder="Digite o texto da alternativa E"/><br><br>
         </div><br>
+        <textarea class="form-control" rows="5" id="comment" placeholder="Digite a justificativa para a resposta da questão"></textarea>
 
         <div class="botoes">
-            <button type="button" class="btn btn-primary">Cadastrar</button>
+              <button type="button" class="btn btn-primary">Cadastrar</button>
               <input type="reset" class="btn btn-danger"/>
               <button type="button" class="btn btn-secondary">Estatísticas</button><br><br>
-            <a href="http://localhost:63342/fullstack/templates/resolucao.html" class="link-primary">Ir para Resolução de Questões.</a>
+        </div>
+        <div class="link">
+        <a href="http://localhost:63342/fullstack/templates/resolucao.html" class="link-primary">Ir para Resolução de Questões.</a>
         </div>
         </form>
 
