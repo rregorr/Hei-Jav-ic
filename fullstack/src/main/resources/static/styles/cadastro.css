@@ -48,12 +48,15 @@ input[type=reset]
 input {
     background-color: white; /*todos os inputs da pagina*/
     border-radius: 15px;/*arredonda os inputs*/
+
+
 }
 
 h2 {
-    border: 2px solid #D3D3D3;/*caixa em volta do titulo*/
+    border: 3px solid #D3D3D3;/*caixa em volta do titulo*/
     padding: 30px;/*largura da caixa em volta do titulo*/
     border-radius: 15px;/*arredonda os inputs*/
+    margin: 15px;
 }
 
 fieldset /*caixa em volta do input e textarea*/
@@ -62,6 +65,9 @@ fieldset /*caixa em volta do input e textarea*/
     height:300px;
     background-color:#FFF0F5;
     border-radius: 15px;/*arredonda as bordas area principal*/
+    border: 3px solid #ccc;
+    margin: 45px;
+
 }
 
 botoes {
@@ -72,4 +78,10 @@ botoes {
     cursor: pointer;
     border-radius: 15px;/*arredonda os inputs*/
     text-align: center;
+}
+
+.inputbda {
+    text-align: center;/*centraliza os inputs*/
+    margin: 15px;
+
 }
