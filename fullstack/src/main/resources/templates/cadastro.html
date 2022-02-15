@@ -7,8 +7,8 @@
         <title>Página de Cadastro</title>
     </head>
     <body>
-        <div class="area">
-            <form id="formulario autocomplete="off">
+        <div class="formulario">
+            <form method="POST" id="formulario" autocomplete="off">
                 <fieldset>
                     <h2><center> Página de Cadastro de Questões</center></h2>
                     <div class="field">
@@ -16,30 +16,30 @@
                         <input type="text" name="banca" placeholder="Banca">
                         <input type="text" name="disciplina" placeholder="Disciplina">
                         <input type="text" name="ano" placeholder="Ano"><br><br>
-                        <textarea name="mensagem" id="mensagem" required placeholder="Digite o texto da questão"></textarea>
+                            <textarea class="form-control" rows="5" id="comment" placeholder="Digite a justificativa para a resposta da questão"></textarea>
                         </div>
                     </div>
                 </fieldset>
-        </div><br>
 
         <div class="entradas">
-              A) <input type="radio" name="a" value="a"><input type="text" name="a" placeholder="Digite o texto da alternativa A"/><br><br>
-              B) <input type="radio" name="a" value="b"><input type="text" name="b" placeholder="Digite o texto da alternativa B"/><br><br>
-              C) <input type="radio" name="a" value="c"><input type="text" name="c" placeholder="Digite o texto da alternativa C"/><br><br>
-              D) <input type="radio" name="a" value="d"><input type="text" name="d" placeholder="Digite o texto da alternativa D"/><br><br>
-              E) <input type="radio" name="a" value="e"><input type="text" name="e" placeholder="Digite o texto da alternativa E"/><br><br>
+              A) <input type="radio" name="a" value="a"> <input type="text" name="a" placeholder="Digite o texto da alternativa A"/><br><br>
+              B) <input type="radio" name="a" value="b"> <input type="text" name="b" placeholder="Digite o texto da alternativa B"/><br><br>
+              C) <input type="radio" name="a" value="c"> <input type="text" name="c" placeholder="Digite o texto da alternativa C"/><br><br>
+              D) <input type="radio" name="a" value="d"> <input type="text" name="d" placeholder="Digite o texto da alternativa D"/><br><br>
+              E) <input type="radio" name="a" value="e"> <input type="text" name="e" placeholder="Digite o texto da alternativa E"/><br><br>
         </div><br>
-        <textarea class="form-control" rows="5" id="comment" placeholder="Digite a justificativa para a resposta da questão"></textarea>
+        <textarea class="form-control form-control2" rows="5" id="comment" placeholder="Comentário do Professor."></textarea>
 
         <div class="botoes">
+            <br>
               <button type="button" class="btn btn-primary">Cadastrar</button>
               <input type="reset" class="btn btn-danger"/>
               <button type="button" class="btn btn-secondary">Estatísticas</button><br><br>
         </div>
         <div class="link">
-        <a href="http://localhost:63342/fullstack/templates/resolucao.html" class="link-primary">Ir para Resolução de Questões.</a>
+             <a href="http://localhost:63342/fullstack/templates/resolucao.html" class="link-primary">Resolver Questões.</a>
         </div>
         </form>
-
-    </body>
+        </div>
+        </body>
 </html>

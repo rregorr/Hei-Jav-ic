@@ -1,6 +1,6 @@
 .entradas {/*inputs das alternativas*/
-    width: 402%;
-    margin: 30px 3;
+    width: 397%;
+    margin-left: 40px;
 }
 
 input[type=text]/*Aplica a formatacao seguinte a input*/
@@ -14,10 +14,10 @@ input[type=text]/*Aplica a formatacao seguinte a input*/
 
 }
 
-textarea{
+.form-control{
     line-height: 20px; /*aplica, de fato, no textarea*/
     padding: 10px;
-    width: 98%;
+    width: 1060px;
     resize: none;
     position:relative;
     top:29%;
@@ -25,6 +25,20 @@ textarea{
     border-radius: 15px;/*arredonda as bordas inputs/textareas*/
     border: 3px solid #ccc; /*bordas grossas input/textarea*/
     outline: none;
+}
+
+.form-control2{
+    line-height: 20px; /*aplica, de fato, no textarea*/
+    padding: 10px;
+    width: 1100px;
+    resize: none;
+    position:relative;
+    top:29%;
+    height:80px;
+    border-radius: 15px;/*arredonda as bordas inputs/textareas*/
+    border: 3px solid #ccc; /*bordas grossas input/textarea*/
+    outline: none;
+    margin-left: 40px;
 }
 
 button[type=button],
@@ -63,23 +77,18 @@ fieldset /*caixa em volta do input e textarea*/
     border-radius: 15px;/*arredonda as bordas area principal*/
     border: 3px solid #ccc;
     margin: 45px;
-
 }
 
 .inputbda {
     text-align: center;/*centraliza os inputs*/
     margin: 15px;
-
-}
-
-.form-control {
-    width:1150px;
-    height:100px;
-    background-color:#FFF0F5;
-    border-radius: 15px;/*arredonda as bordas inputs/textareas*/
-    border: 3px solid #ccc;
 }
 
 .link {
     margin: 15px;
+}
+
+.botoes{
+    text-align: center;/*centraliza os inputs*/
+
 }
