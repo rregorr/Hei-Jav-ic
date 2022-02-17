@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class = "login">
-        <h1>Login</h1>
+        <h1>TELA DE LOGIN</h1>
         <p th:if="${loginError}" class="error">Usuário ou senha errados!</p>
         <form th:action="@{/login}" method="post" th:object="${autentica}">
             <input type="text" id="username" class="field" name="email" autofocus="autofocus" placeholder="Usuário" /> <br />
