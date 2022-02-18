@@ -3,12 +3,16 @@ package com.javajorney.fullstack.model;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name="estudante")
+//@Table(name="estudante")
 public class usuario {
     @ManyToOne //porém, um mesmo usuário pode ter o perfil tanto adm quanto de estudante.
-    private role perfil;
+    private role role;
+    //private List<role> role = new ArrayList<role>();
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

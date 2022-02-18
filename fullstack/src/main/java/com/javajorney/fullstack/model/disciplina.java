@@ -1,13 +1,19 @@
 package com.javajorney.fullstack.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class disciplina {
-    @OneToMany
-    private question questao;
+    @OneToMany //pois uma disciplina contem diversas questões
+    @JoinColumn(name="fk_disciplina_id_bonito")//aponta qual a fk em question
+    //private question questao;
+    private List<question> question = new ArrayList<question>();//lista no lado o2m???
+
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//posso seter AUTO???
     private Long id;
     String nome;
 

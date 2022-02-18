@@ -1,14 +1,20 @@
 package com.javajorney.fullstack.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name="usuario_questao")
+//@Table(name="usuario_questao")
 public class usuario_questoes {
     @ManyToOne
     private usuario usuario;
+    //private List<usuario> usuario = new ArrayList<usuario>();
+
     @ManyToOne
     private question questao;
+    //private List<question> question = new ArrayList<question>();
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_usuario;

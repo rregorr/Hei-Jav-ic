@@ -1,12 +1,17 @@
 package com.javajorney.fullstack.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name="perfil")
+//@Table(name="perfil")
 public class role {
     @OneToMany
-    private usuario usuario;
+    @JoinColumn(name="fk_role_id")
+    //private usuario usuario;
+    private List<usuario> usuario1 = new ArrayList<usuario>();
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

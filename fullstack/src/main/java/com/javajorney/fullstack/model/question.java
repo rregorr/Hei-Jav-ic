@@ -3,9 +3,9 @@ package com.javajorney.fullstack.model;
 import javax.persistence.*;
 
 @Entity//(name="questao") -- ???
-@Table(name="questao")
+//@Table(name="questao")
 public class question {
-    @OneToOne
+    @ManyToOne
     private disciplina disciplina;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
