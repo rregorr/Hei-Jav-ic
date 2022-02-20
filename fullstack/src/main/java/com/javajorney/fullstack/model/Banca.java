@@ -5,17 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Disciplina {
-    @OneToMany //pois uma disciplina contem diversas questões
-    @JoinColumn(name="fk_disciplina_id")//aponta qual a fk em question
-    //private question questao;
-    private List<Question> question = new ArrayList<Question>();//lista no lado o2m???
-
-
+@Table(name="banca")
+public class Banca {
+    @OneToMany
+    @JoinColumn(name="fk_banca_id")
+    private List<Question> question = new ArrayList<Question>();
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//posso seter AUTO???
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    String nome;
+    private String nome;
 
     public Long getId() {
         return id;

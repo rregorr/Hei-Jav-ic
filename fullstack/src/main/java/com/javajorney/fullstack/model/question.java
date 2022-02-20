@@ -4,13 +4,15 @@ import javax.persistence.*;
 
 @Entity//(name="questao") -- ???
 //@Table(name="questao")
-public class question {
+public class Question {
     @ManyToOne
-    private disciplina disciplina;
+    private Disciplina disciplina;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long fk_disciplina_id;
+    private Long fk_ano_id;
+    private Long fk_banca_id;
     @Column(length=50, nullable=false, unique=false)//eu teria que definir uma anotação por atributo???
     private String tipo;
     private String comando;

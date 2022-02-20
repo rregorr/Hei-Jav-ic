@@ -6,11 +6,9 @@ import java.util.List;
 
 @Entity
 //@Table(name="perfil")
-public class role {
-    @OneToMany
-    @JoinColumn(name="fk_role_id")
-    //private usuario usuario;
-    private List<usuario> usuario1 = new ArrayList<usuario>();
+public class Role {
+    @ManyToMany(mappedBy = "roles") //o spring automat cria 3 tabelas no bd.
+    private List<Usuario> usuario1 = new ArrayList<Usuario>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
