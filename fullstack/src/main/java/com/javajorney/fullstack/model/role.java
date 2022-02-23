@@ -30,4 +30,12 @@ public class Role {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-}//
+
+    public List<Usuario> getUsuario1() {
+        return usuario1;
+    }
+
+    public void setUsuario1(List<Usuario> usuario1) {
+        this.usuario1 = usuario1;
+    }
+}

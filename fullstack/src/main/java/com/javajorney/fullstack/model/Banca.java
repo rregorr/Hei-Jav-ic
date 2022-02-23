@@ -29,4 +29,12 @@ public class Banca {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public List<Questao> getQuestoes() {
+        return questoes;
+    }
+
+    public void setQuestoes(List<Questao> questoes) {
+        this.questoes = questoes;
+    }
 }

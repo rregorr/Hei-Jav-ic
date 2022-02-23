@@ -10,7 +10,6 @@ public class Disciplina {
     //private question questao;
     private List<Questao> questoes = new ArrayList<Questao>();//lista no lado o2m???
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//posso seter AUTO???
     private Long id;
@@ -30,5 +29,13 @@ public class Disciplina {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public List<Questao> getQuestoes() {
+        return questoes;
+    }
+
+    public void setQuestoes(List<Questao> questoes) {
+        this.questoes = questoes;
     }
 }

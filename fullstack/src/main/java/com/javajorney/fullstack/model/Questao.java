@@ -125,4 +125,44 @@ public class Questao implements Serializable {
     public void setExplicacao(String explicacao) {
         this.comentario = explicacao;
     }
+
+    public Disciplina getDisciplina() {
+        return disciplina;
+    }
+
+    public void setDisciplina(Disciplina disciplina) {
+        this.disciplina = disciplina;
+    }
+
+    public Ano getAno() {
+        return ano;
+    }
+
+    public void setAno(Ano ano) {
+        this.ano = ano;
+    }
+
+    public Banca getBanca() {
+        return banca;
+    }
+
+    public void setBanca(Banca banca) {
+        this.banca = banca;
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
 }

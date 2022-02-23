@@ -32,4 +32,12 @@ public class Ano {
     public void setAno(String ano) {
         this.ano = ano;
     }
+
+    public List<Questao> getQuestao() {
+        return questao;
+    }
+
+    public void setQuestao(List<Questao> questao) {
+        this.questao = questao;
+    }
 }
