@@ -28,6 +28,7 @@ public class Usuario {
     }, inverseJoinColumns = {
             @JoinColumn(name="id_role", referencedColumnName = "id")
     }) //criar a tab de uniao...3a tab
+    @ManyToMany
     private List<Role> roles = new ArrayList<>();
     private String senha;
 

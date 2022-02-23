@@ -34,13 +34,15 @@ public class Questao implements Serializable {
     // private Questao questao.
     // Agora, utilize o mapeamento @ManyToMany entre roles e usuario como referência
     // e mapeie a relação many-to-many de usuario com questao.
+    @ManyToMany(mappedBy = "questoes")
+    private List<Usuario> usuarios = new ArrayList<>();
+
     @JoinTable(name="usuarios_questoes", joinColumns = {
             @JoinColumn(name="id_usuario", referencedColumnName = "id")
     }, inverseJoinColumns = {
             @JoinColumn(name="id_questao", referencedColumnName = "id")
     })
 
-    private List<Questao> questoes = new ArrayList<>();
 
     private String comentario;
 
