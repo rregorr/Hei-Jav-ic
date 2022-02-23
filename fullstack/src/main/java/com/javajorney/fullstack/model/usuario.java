@@ -21,7 +21,7 @@ public class Usuario {
     // ou seja, você vai criar essa associação em Java Inserindo na classe Usuario o seguinte atributo:
     // private Questao questao. Agora, utilize o mapeamento @ManyToMany entre roles e usuario como referência
     // e mapeie a relação many-to-many de usuario com questao.
-    private Questao questao;
+    private List<Questao> questoes = new ArrayList<>();
 
     @JoinTable (name="usuarios_roles", joinColumns = {
             @JoinColumn(name="id_usuario", referencedColumnName = "id") //

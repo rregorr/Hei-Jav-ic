@@ -52,14 +52,6 @@ public class Questao implements Serializable {
         this.id = id;
     }
 
-    public Long getFk_disciplina_id() {
-        return fk_disciplina_id;
-    }
-
-    public void setFk_disciplina_id(Long fk_disciplina_id) {
-        this.fk_disciplina_id = fk_disciplina_id;
-    }
-
     public String getTipo() {
         return tipo;
     }
