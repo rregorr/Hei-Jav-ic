@@ -5,15 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="banca")
 public class Banca {
-    @OneToMany
-    @JoinColumn(name="fk_banca_id")
-    private List<Question> question = new ArrayList<Question>();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    @OneToMany(mappedBy = "banca") //Uma banca possui váras questões. A classe banca recebe a anotação
+    // (@mappedBy); a classe que recebe a chave estrangeira que deve ter a anotação @JoinColumn;
+    private List<Questao> questoes = new ArrayList<Questao>();
 
     public Long getId() {
         return id;

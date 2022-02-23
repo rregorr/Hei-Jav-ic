@@ -7,14 +7,22 @@ import java.util.List;
 @Entity
 //@Table(name="estudante")
 public class Usuario {
-    //@ManyToMany //porém, um mesmo usuário pode ter o perfil tanto adm quanto de estudante.
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
-    @ManyToMany
+    @ManyToMany//um mesmo usuário pode ter vários perfis; um perfil pode ser atribuido a varios usuarios. Assim, a classe
+    //questões tbm vai ter @M2M. Como a cardinalidade é M2M, precisa fazer mapeamento @many-to-many
+    //preciso decidir onde fará o "grosso" do mapeamento, e a outra classe vai precisar apenas da anotação
+    // @many-to-many(mappedBy = "nomeDoAtributoNaOutraClasse")
+
+    //Missão: precisamos fazer uma associação nessa tabela, criando nela um atributo referente a questão,
+    // ou seja, você vai criar essa associação em Java Inserindo na classe Usuario o seguinte atributo:
+    // private Questao questao. Agora, utilize o mapeamento @ManyToMany entre roles e usuario como referência
+    // e mapeie a relação many-to-many de usuario com questao.
+    private Questao questao;
+
     @JoinTable (name="usuarios_roles", joinColumns = {
             @JoinColumn(name="id_usuario", referencedColumnName = "id") //
     }, inverseJoinColumns = {

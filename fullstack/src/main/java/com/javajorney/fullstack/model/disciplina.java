@@ -6,10 +6,9 @@ import java.util.List;
 
 @Entity
 public class Disciplina {
-    @OneToMany //pois uma disciplina contem diversas questões
-    @JoinColumn(name="fk_disciplina_id")//aponta qual a fk em question
+    @OneToMany(mappedBy = "disciplina") //pois uma disciplina contem diversas questões
     //private question questao;
-    private List<Question> question = new ArrayList<Question>();//lista no lado o2m???
+    private List<Questao> questoes = new ArrayList<Questao>();//lista no lado o2m???
 
 
     @Id

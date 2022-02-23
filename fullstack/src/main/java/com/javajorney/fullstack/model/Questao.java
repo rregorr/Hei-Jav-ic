@@ -1,18 +1,18 @@
 package com.javajorney.fullstack.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-@Entity//(name="questao") -- ???
-//@Table(name="questao")
-public class Question {
-    @ManyToOne
-    private Disciplina disciplina;
+@Entity
+public class Questao implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long fk_disciplina_id;
-    private Long fk_ano_id;
-    private Long fk_banca_id;
+    @ManyToOne //Uma questão só pode ser elaborada por uma banca -- dúvida: Nâo seria O2O?
+    @JoinColumn(name="fk_disciplina_id")
+    private Disciplina disciplina;
     @Column(length=50, nullable=false, unique=false)//eu teria que definir uma anotação por atributo???
     private String tipo;
     private String comando;
@@ -22,7 +22,27 @@ public class Question {
     private String questao4;
     private String questao5;
     private String gabarito;
-    private String explicacao;
+    @ManyToOne
+    @JoinColumn(name="fk_ano_id")
+    private Ano ano;
+    @ManyToOne
+    @JoinColumn(name="fk_banca_id")
+    private Banca banca;
+
+    //Missão: precisamos fazer uma associação nessa tabela, criando nela um atributo referente a questão,
+    // ou seja, você vai criar essa associação em Java Inserindo na classe Usuario o seguinte atributo:
+    // private Questao questao.
+    // Agora, utilize o mapeamento @ManyToMany entre roles e usuario como referência
+    // e mapeie a relação many-to-many de usuario com questao.
+    @JoinTable(name="usuarios_questoes", joinColumns = {
+            @JoinColumn(name="id_usuario", referencedColumnName = "id")
+    }, inverseJoinColumns = {
+            @JoinColumn(name="id_questao", referencedColumnName = "id")
+    })
+
+    private List<Questao> questoes = new ArrayList<>();
+
+    private String comentario;
 
     public Long getId() {
         return id;
@@ -105,10 +125,10 @@ public class Question {
     }
 
     public String getExplicacao() {
-        return explicacao;
+        return comentario;
     }
 
     public void setExplicacao(String explicacao) {
-        this.explicacao = explicacao;
+        this.comentario = explicacao;
     }
 }
