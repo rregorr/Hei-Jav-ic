@@ -8,7 +8,7 @@ import java.util.List;
 //@Table(name="perfil")
 public class Role {
     @ManyToMany(mappedBy = "roles") //o spring automat cria 3 tabelas no bd.
-    private List<Usuario> usuario1 = new ArrayList<Usuario>();
+    private List<Usuario> usuarios = new ArrayList<Usuario>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,10 +32,10 @@ public class Role {
     }
 
     public List<Usuario> getUsuario1() {
-        return usuario1;
+        return usuarios;
     }
 
     public void setUsuario1(List<Usuario> usuario1) {
-        this.usuario1 = usuario1;
+        this.usuarios = usuario1;
     }
 }

@@ -12,6 +12,8 @@ public class Usuario {
     private Long id;
     private String nome;
     private String email;
+    private String senha;
+
     @ManyToMany//um mesmo usuário pode ter vários perfis; um perfil pode ser atribuido a varios usuarios. Assim, a classe
     //questões tbm vai ter @M2M. Como a cardinalidade é M2M, precisa fazer mapeamento @many-to-many
     //preciso decidir onde fará o "grosso" do mapeamento, e a outra classe vai precisar apenas da anotação
@@ -30,7 +32,6 @@ public class Usuario {
     }) //criar a tab de uniao...3a tab
     @ManyToMany
     private List<Role> roles = new ArrayList<>();
-    private String senha;
 
     public Usuario() {
     }

@@ -28,6 +28,7 @@ public class Questao implements Serializable {
     @ManyToOne
     @JoinColumn(name="fk_banca_id")
     private Banca banca;
+    private String comentario;
 
     //Missão: precisamos fazer uma associação nessa tabela, criando nela um atributo referente a questão,
     // ou seja, você vai criar essa associação em Java Inserindo na classe Usuario o seguinte atributo:
@@ -42,9 +43,6 @@ public class Questao implements Serializable {
     }, inverseJoinColumns = {
             @JoinColumn(name="id_questao", referencedColumnName = "id")
     })
-
-
-    private String comentario;
 
     public Long getId() {
         return id;
