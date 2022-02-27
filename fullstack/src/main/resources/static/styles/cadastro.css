@@ -55,6 +55,21 @@ input[type=reset]
 
 }
 
+.selects
+{
+      height: 35px;
+      width: 90%;
+      border: none;/*tira as bordas*/
+      cursor: pointer;
+      border-radius: 150px;/*arredonda os botoes*/
+      margin: 15px; /*margem vertical*/
+      display: flex;
+      text-align: center;
+      padding-left: 100px; /*alinha texto na caixa, à esquerda*/
+
+
+}
+
 input {
     background-color: white; /*todos os inputs da pagina*/
     border-radius: 15px;/*arredonda os inputs*/
@@ -82,6 +97,7 @@ fieldset /*caixa em volta do input e textarea*/
 .inputbda {
     text-align: center;/*centraliza os inputs*/
     margin: 15px;
+
 }
 
 .link {
@@ -91,4 +107,5 @@ fieldset /*caixa em volta do input e textarea*/
 .botoes{
     text-align: center;/*centraliza os inputs*/
 }
+
 
