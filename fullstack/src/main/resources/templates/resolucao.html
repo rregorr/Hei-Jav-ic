@@ -11,23 +11,24 @@
     <body>
         <div class="area">
             <div class="entradas">
-                <form method="POST" id="formulario" autocomplete="off" th:action="@{/resolver}" th:object="${questao}">
+                <form id="formulario" autocomplete="off" th:action="@{/resolver}" th:object="${disciplina}">
                     <fieldset>
                         <h2><center>Página de Resolução de Questões</center></h2>
                         <input type="text" name="pesquisar", placeholder="Pesquisar"/>
                         <div class="selects"> <!-- Ao remover os selects abaixo, some o erro -->
-                            <select th:field="*{banca}" class="form-select" aria-label="Default select example">
+                            <select th:field="*{disciplina}" class="form-select" aria-label="Default select example">
                                 <option
+                                        th:each="disc : ${disciplina}"
+                                        th:value="${disc.id}"
+                                        th:text="${disc.nome}">
+                                </option>
+                            </select>
+                           <!-- <select th:field="*{banca}" class="form-select" aria-label="Default select example">
+                                    <option
+
                                         th:each="bnc : ${bancas}"
                                         th:value="${bnc.id}"
                                         th:text="${bnc.nome}">
-                                </option>
-                            </select>
-                            <select th:field="*{disciplina}" class="form-select" aria-label="Default select example">
-                                    <option
-                                            th:each="disc : ${disciplinas}"
-                                            th:value="${disc.id}"
-                                            th:text="${disc.nome}">
                                     </option>
                             </select>
                             <select th:field="*{ano}" class="form-select" aria-label="Default select example">
@@ -36,9 +37,9 @@
                                             th:value="${ano.id}"
                                             th:text="${ano.ano}">
                                     </option>
-                            </select>
+                            </select-->
                             </div>
-                        </div>
+                    </fieldset>
 
                         <button type="button" class="btn btn-primary">Filtrar</button>
                         <input type="reset" class="btn btn-danger"/>
