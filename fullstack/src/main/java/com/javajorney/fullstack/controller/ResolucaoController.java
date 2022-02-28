@@ -1,0 +1,16 @@
+package com.javajorney.fullstack.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/resolver")
+public class ResolucaoController {
+    @GetMapping
+    public String login() {
+        return "resolucao";
+    }
+
+
+}

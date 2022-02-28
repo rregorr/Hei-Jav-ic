@@ -68,7 +68,7 @@ public class LoginController {
         for (int i = 0; i < usuarios.size(); i++) {
             if (autentica.getEmail().equals(usuarios.get(i).getEmail()) && autentica.getSenha().equals(usuarios.get
                     (i).getSenha())) {
-                return "resolucao";//em caso de sucesso, ir para pagina inicial
+                return "cadastro";//em caso de sucesso, ir para pagina inicial
             }
         }
         model.addAttribute("loginError", true);
