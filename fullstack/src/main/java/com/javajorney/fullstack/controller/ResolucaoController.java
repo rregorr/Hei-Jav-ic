@@ -25,19 +25,15 @@ public class ResolucaoController {
     @Autowired//injeta uma instância de DisciplinaRepository em nosso Controller.
     AnoRepository anoRepository;
 
-    //nesse caso, você tem que injetar no Controller de interesse uma instância do repositório que deseja e gerar uma lista com os dados
-    // armazenados no banco referente ao objeto que deseja. Após você ter essa lista a disposição, irá injetar ela na view através da
-    // isntãncia de Model.
-
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping
     public String resolver (Model model) {
-        List<Disciplina>  disciplina  = disciplinaRepository.findAll();
-        model.addAttribute("disciplina", disciplina);
+        List<Disciplina>  disciplina  = disciplinaRepository.findAll(); //busca a lista de disciplinas no banco
+        model.addAttribute("disciplina", disciplina); //associa a entidade disciplina do banco à propriedade disciplina, da view
         /*bancas = bancaRepository.findAll();
         model.addAttribute("bancas", bancas);
         anos = anoRepository.findAll();
         model.addAttribute("anos", anos);*/
-     //   model.addAttribute("disciplina", new Disciplina());
+
         return "resolucao";
         }
 
