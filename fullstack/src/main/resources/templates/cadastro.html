@@ -12,6 +12,8 @@
 
            <div class="formulario">
                <form method="POST" id="formulario" autocomplete="off" th:action="@{/cadastrar}" th:object="${questao}">
+                   <!-- objetct Tem que ter o mesmo nome que você colocou no parâmetro do controller que irá
+                    receber esse objeto em: @ModelAtributte("qualquerNome") Questao questao), classe CadastroController-->
                    <fieldset>
                        <h2><center> Página de Cadastro de Questões</center></h2>
                            <div class="inputbda">
