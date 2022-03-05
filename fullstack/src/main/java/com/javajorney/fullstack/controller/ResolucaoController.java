@@ -11,14 +11,10 @@ import com.javajorney.fullstack.repository.QuestaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
-
-import static sun.jvm.hotspot.code.CompressedStream.L;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/resolver")
@@ -42,7 +38,18 @@ public class ResolucaoController {
         List<Ano> ano = anoRepository.findAll();
         model.addAttribute("ano", ano);
 
-        Questao questao = questaoRepository.findById(Long.(1));
+        Optional<Questao> questao = questaoRepository.findById(13l);
+        model.addAttribute("ano", questao.get().getAno());
+        model.addAttribute("banca", questao.get().getBanca());
+        model.addAttribute("disciplina", questao.get().getDisciplina());
+        model.addAttribute("comando", questao.get().getComando());
+        model.addAttribute("questao1", questao.get().getQuestao1());
+        model.addAttribute("questao2", questao.get().getQuestao2());
+        model.addAttribute("questao3", questao.get().getQuestao3());
+        model.addAttribute("questao4", questao.get().getQuestao4());
+        model.addAttribute("questao5", questao.get().getQuestao5());
+        //model.addAttribute("anoq", questao.get().getAno());
+        model.addAttribute("comentarioq", questao.get().getComentario());
 
         return "resolucao";
         }
